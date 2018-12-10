@@ -36,3 +36,26 @@
 # while len(names) >= 1:
 # 	names.pop()
 # 	print(names)
+
+# List comprehension
+"""
+simple_list = [1, 2, 3, 4]
+simple_list
+[1, 2, 3, 4]
+
+doubled_list = [el * 2 for el in simple_list]
+doubled_list
+[2, 4, 6, 8]
+"""
+
+
+# Dictionary comprehension
+"""
+stats = [('age', 24), ('weight', 240), ('height', 72)]
+stats
+[('age', 24), ('weight', 240), ('height', 72)]
+
+dict_stats = {key: value for (key, value) in stats}
+dict_stats
+{'age': 24, 'weight': 240, 'height': 72}
+"""
