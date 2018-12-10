@@ -39,12 +39,12 @@ def add_transaction(recipient, sender=owner, amount=1.0):
 def mine_block():
     last_block = blockchain[-1]
     hashed_block = ''
-    for keys in last_block:
-        value = last_block[keys]
+    for key in last_block:
+        value = last_block[key]
         hashed_block += str(value)
     print(hashed_block)
     block = {
-        'previous_hash': 'XYZ',
+        'previous_hash': hashed_block,
         'index': len(blockchain),
         'transactions': open_transactions
     }
@@ -116,10 +116,10 @@ while waiting_for_input:
         waiting_for_input = False
     else:
         print('Input was invalid, please pick a value from the list!')
-    if not verify_chain():
-        print_blockchain_elements()
-        print('Invalid blockchain')
-        break
+    # if not verify_chain():
+    #     print_blockchain_elements()
+    #     print('Invalid blockchain')
+    #     break
 else:
     print('User left!')
 
