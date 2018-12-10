@@ -1,4 +1,6 @@
 # Initializing our blockchain list
+MINING_REWARD = 10
+
 genesis_block = {
     'previous_hash': '',
     'index': 0,
@@ -12,6 +14,20 @@ participants = {'Fred'}
 
 def hash_block(block):
     return '-'.join([str(block[key]) for key in block])
+
+
+def get_balance(participant):
+    tx_sender = [[tx['amount'] for tx in block['transactions'] if tx['sender'] == participant] for block in blockchain]
+    amount_sent = 0
+    for tx in tx_sender:
+        if len(tx) > 0:
+            amount_sent += tx[0]
+    tx_recipient = [[tx['amount'] for tx in block['transactions'] if tx['sender'] == participant] for block in blockchain]
+    amount_received = 0
+    for tx in tx_recipient:
+        if len(tx) > 0:
+            amount_received += tx[0]
+    return amount_received - amount_sent
 
 
 def get_last_blockchain_value():
@@ -129,6 +145,7 @@ while waiting_for_input:
         print('Invalid blockchain')
         # Break out of the loop
         break
+    print(get_balance('Fred'))
 else:
     print('User left!')
 
