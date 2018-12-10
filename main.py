@@ -87,3 +87,42 @@ dup_list[5] = 6
 dup_list
 [1, 2, 3, 4, 5, 6]
 """
+
+# Range select a list
+"""
+Ranging a list will also copy the list
+
+Original list
+simple_list = [1, 2, 3, 4, 5]
+simple_list
+[1, 2, 3, 4, 5]
+
+new_list = simple_list[0: 3]
+The range selector only goes up to the last index
+new_list
+[1, 2, 3]
+
+new_list = simple_list[:-1]
+This range selector with a negative grabs the everything but the last value/s
+new_list
+[1, 2, 3, 4]
+"""
+
+# Range select a tuple
+"""
+Can also range a tuple because there is an order
+
+tuple = (1, 2, 3, 4)
+tuple
+(1, 2, 3, 4)
+
+tuple[0:2]
+(1, 2)
+
+tuple[:-1]
+(1, 2, 3)
+"""
+
+# Cannot range a set because a set is unordered
+
+# Cannot range a dictionary because a dictionary is unordered
