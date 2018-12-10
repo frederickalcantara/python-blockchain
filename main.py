@@ -73,3 +73,17 @@ dict_stats = {key: value for (key, value) in stats}
 dict_stats
 {'age': 24, 'weight': 240, 'height': 72}
 """
+
+# Copy a new list
+"""
+Original list
+my_list = [1, 2, 3, 4, 5]
+my_list
+[1, 2, 3, 4, 5]
+
+Copied list
+dup_list = my_list[:]
+dup_list[5] = 6
+dup_list
+[1, 2, 3, 4, 5, 6]
+"""
