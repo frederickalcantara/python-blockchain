@@ -48,6 +48,20 @@ doubled_list
 [2, 4, 6, 8]
 """
 
+# List comprehension & if keyword
+"""
+simple_list = [1, 2, 3, 4]
+dup_list = [el * 2 for el in simple_list if el % 2 == 0]
+
+dup_list
+[4, 8]
+
+calc_items = [1, 2]
+dup_list = [el * 2 for el in simple_list if el in calc_items]
+
+dup_list
+[2, 4]
+"""
 
 # Dictionary comprehension
 """
