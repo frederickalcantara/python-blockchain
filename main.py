@@ -126,3 +126,126 @@ tuple[:-1]
 # Cannot range a set because a set is unordered
 
 # Cannot range a dictionary because a dictionary is unordered
+
+# Cannot copy a complex data structure like a dictionary
+"""
+stats = [{'name': 'Fred'}, {'age': 24}]
+
+stats
+[{'name': 'Fred'}, {'age': 24}]
+
+copied_stats = stats[:]
+
+copied_stats[0]['name'] = 'Fred'
+
+copied_stats
+[{'name': 'Fred'}, {'age': 24}]
+
+stats
+[{'name': 'Fred'}, {'age': 24}]
+
+copied_stats[0]['name'] = 'Freddyal'
+copied_stats
+[{'name': 'Freddyal'}, {'age': 24}]
+
+stats
+[{'name': 'Freddyal'}, {'age': 24}]
+"""
+
+# You have to copy the complex data structure element for something like a dictionary
+
+
+# is vs ==, is and == have two distinct purposes. is keyword is different for objects in memory while == works because the values are the same
+"""
+simple_list = [1, 2, 3, 4]
+second_list = [1, 2, 3, 4]
+
+simple_list == second_list
+True
+
+simple_list is second_list
+False
+"""
+
+# Manipulating Data Structures
+"""
+Extending list function ( list.extend( second_list ) )
+
+simple_list = [1, 2, 3, 4]
+simple_list.extend([5, 6, 7])
+print(simple_list)
+"""
+
+# Looping through a dictionary
+"""
+converting dictionary into a tuple ( dictionary.items() ). Grab keys and values of dict
+
+d = {'name': 'Fred'}
+print(d.items())
+for k, v in d.items():
+    print(k, v)
+"""
+
+# Checking the index of a tuple
+"""
+Checking the index of a tuple from the value ( tuple.index( value_of_tuple ) )
+
+t = (1, 2, 3)
+print(t.index(2))
+"""
+
+# Sets are a unique data set in that it only allows a single value to be the same
+"""
+s = {'Fred', 'Andreas', 'Katie'}
+print(s)
+"""
+
+# Deleting an element from a data structure
+"""
+The del or del() function works only with lists or dictionaries,
+It will not work with tuples or sets
+
+simple_list = [1, 2, 3, 4]
+del simple_list[0]
+print(simple_list)
+
+d = {'name': 'Fred'}
+del(d['name'])
+print(d)
+
+t = (1, 2, 3)
+print(t.index(1))
+del(t[0])
+print(t)
+
+s = {'Fred', 'Andreas', 'Katie'}
+del(s['Fred'])
+print(s)
+"""
+
+# all vs any keyword
+"""
+all checks if ALL of the items in a list match a condition to TRUE. If all of them don't, then it's FALSE
+
+any checks if ANY of the items in a list match a condition to TRUE. If none of them don't, then it's FALSE
+
+new_list = [True, True, False]
+
+any(new_list)
+True
+
+all(new_list)
+False
+
+number_list = [1, 2, 3, -5]
+
+[el for el in number_list if el > 0]
+[1, 2, 3]
+
+[el > 0 for el in number_list]
+
+[True, True, True, False]
+
+all([el > 0 for el in number_list])
+False
+"""
