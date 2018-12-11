@@ -17,6 +17,8 @@ print(all([el['age'] > 20 for el in people]))
 # 4. Copy the person list to edit the name of the first person without changing the list
 
 people_copy = [person.copy() for person in people]
+# create a list of dictionaries to allow for duplication, then loop through it to get a clone for each dictionary
+
 people_copy[0]['name'] = 'John'
 print(people_copy)
 print(people)
