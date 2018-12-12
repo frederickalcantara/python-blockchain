@@ -249,3 +249,33 @@ number_list = [1, 2, 3, -5]
 all([el > 0 for el in number_list])
 False
 """
+
+# Strings
+"""
+Strings are immutable, but are loopable like a list
+
+You can use the format function to inject variables into a string
+
+'I am {} and I am {} years old.'.format(name, age)
+
+'I am Fred and I am 24 years old.'
+
+The parameters of a .format() function are injected in the order that the variables are placed in the parameters. You can use an infinite amount of parameters in the format function
+
+'I am {0} and I am {1} years old.'.format(name, age)
+
+'I am 24 and I am Fred years old.'
+
+You can put numbers in the {} to allow for manipulation in which you can decide where to place the parameters.
+
+name = Fred
+age = 24
+
+'I am {name} and I am {years} years old.'.format(name=name, years=age)
+
+'I am Fred and I am 24 years old.'
+
+You can even assign variables to the parameters to name the injected variable whatever you want and decide where to place those parameters.
+
+Check out the docs for all the manipulations that you can do with the format function
+"""
