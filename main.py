@@ -288,3 +288,32 @@ age = 24
 >>> f'I am {name} and I am {age} years old.'
 'I am Fred and I am 24 years old.'
 """
+
+# Map function
+"""
+Have to wrap inside a list in order to be useful as this function will wrap inside an object
+
+simple_list = [1, 2, 3, 4]
+
+def multiply(el):
+    return el * 2
+
+list(map(multiply, simple_list))
+[2, 4, 6, 8]
+"""
+
+# Lambda function
+"""
+Lambda functions: a mathematical function that performs a math equation, it can take away the leg work of creating a function in a map function
+
+quick (one-line) anonymous function.
+
+list(map(lambda el: el * 2, simple_list))
+[2, 4, 6, 8]
+"""
+
+# Reducing a list (.reduce() function)
+"""
+
+
+"""
