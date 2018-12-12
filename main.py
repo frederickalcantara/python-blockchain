@@ -278,4 +278,13 @@ age = 24
 You can even assign variables to the parameters to name the injected variable whatever you want and decide where to place those parameters.
 
 Check out the docs for all the manipulations that you can do with the format function
+
+You can also directly inject variables into a string using the f character
+It works just like the format function
+
+name = Fred
+age = 24
+
+>>> f'I am {name} and I am {age} years old.'
+'I am Fred and I am 24 years old.'
 """
