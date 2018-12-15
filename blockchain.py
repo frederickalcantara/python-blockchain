@@ -9,8 +9,9 @@ genesis_block = {
     'index': 0,
     'transactions': []
 }
-
+# Initializing our (empty) blockchain list
 blockchain = [genesis_block]
+# Unhandled transactions
 open_transactions = []
 owner = 'Fred'
 participants = {'Fred'}
