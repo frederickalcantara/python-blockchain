@@ -1,23 +1,12 @@
-class Car():
+from vehicle import Vehicle
+
+
+class Car(Vehicle):
     # top_speed = 160
     # warnings = []
-    def __init__(self, starting_top_speed=160):
-        self.top_speed = starting_top_speed
-        self.__warnings = []
 
-    def __repr__(self):
-        print('Printing...')
-        return 'Top Speed: {}, Warnings: {}'.format(self.top_speed, self.__warnings)
-
-    def add_warning(self, warning_text):
-        if len(warning_text) > 0:
-            self.__warnings.append(warning_text)
-
-    def get_warnings(self):
-        return self.__warnings
-
-    def drive(self):
-        print('I am driving not certainly faster than {}'.format(self.top_speed))
+    def brag(self):
+        print('Check out my car')
 
 
 car1 = Car()
