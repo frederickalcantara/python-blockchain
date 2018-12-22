@@ -6,7 +6,8 @@ from verification import Verification
 
 class Node:
     def __init__(self):
-        self.id = uuid4()
+        # self.id = str(uuid4())
+        self.id = "Fred"
         self.blockchain = Blockchain(self.id)
 
     def get_transaction_value(self):
