@@ -3,11 +3,18 @@ class Car():
     # warnings = []
     def __init__(self, starting_top_speed=160):
         self.top_speed = starting_top_speed
-        self.warnings = []
+        self.__warnings = []
 
     def __repr__(self):
         print('Printing...')
-        return 'Top Speed: {}, Warnings: {}'.format(self.top_speed, self.warnings)
+        return 'Top Speed: {}, Warnings: {}'.format(self.top_speed, self.__warnings)
+
+    def add_warning(self, warning_text):
+        if len(warning_text) > 0:
+            self.__warnings.append(warning_text)
+
+    def get_warnings(self):
+        return self.__warnings
 
     def drive(self):
         print('I am driving not certainly faster than {}'.format(self.top_speed))
@@ -17,16 +24,20 @@ car1 = Car()
 car1.drive()
 
 # Car.top_speed = 200
-car1.warnings.append('New Warning')
+car1.add_warning('New Warning')
+# car1.__warnings.append([])
 # print(car1.__dict__)
 print(car1)
 
 car2 = Car(200)
 car2.drive()
+print(car2.get_warnings())
 
 car3 = Car(250)
 car3.drive()
+print(car3.get_warnings())
 
 
 # __init__ is a constructor in python
 # Have to return self in any method for an object
+# Add __ in front of a attribute to indicate that this is private in a constructor
