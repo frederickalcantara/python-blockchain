@@ -90,5 +90,4 @@ steak.describe()
 
 # 4) Overwrite a “dunder” method to be able to print your “Food” class.
 
-""" Refer back to question 3 as I overwrote a "dunder" method """
 print(strawberry)
